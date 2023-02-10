@@ -300,7 +300,7 @@ const init = () => {
     const eventTarget = $("#event-target");
     eventTarget.click(handleEventTarget);
 
-    
+
 
     // 2.23 Hiding and showing content
     let hideBtn, showBtn, hideShowHeader;
@@ -327,13 +327,6 @@ const init = () => {
 }
 
 $(init);
-
-
-
-
-
-
-// Changing style programmatically
 
 
 
