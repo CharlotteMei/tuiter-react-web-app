@@ -1,17 +1,40 @@
-body {
-    margin: 10px;
-}
 
 /* navigation */
-
 .btn-round-corner-override {
     width: 100%;
     border-radius: 25px;
 }
 
+
+
+.list-group-item.override-bs {
+    border: none;
+    /* background-color: lightblue;  */
+}
+
 /* main */
-#search-bar {
+
+.input-group-text.override-bs-search {
     border-radius: 50px;
+    /* background-color: white; */
+    background-color: #f8fbfa; 
+    border-right: 0;
+}
+
+.form-control.override-bs-search {
+    border-radius: 50px;
+    /* background-color: white; */
+    background-color: #f8fbfa; 
+    border-left: 0;
+}
+
+.nav-link.active.override-bs {
+    color: black;
+    border-bottom: 4px solid #60aaf6;
+}
+
+.nav-link.override-bs {
+    color: lightgray;
 }
 
 .main-page-image {
@@ -33,7 +56,6 @@ body {
 }
 
 /* follow */
-
 .account-profile-pic {
     border-radius: 50%;
     height: 50px;
@@ -42,4 +64,14 @@ body {
 
 #follow-button {
     width: 20%;
+}
+
+.list-group.override-bs-follow {
+    border-radius: 20px;
+}
+
+.list-group-item.override-bs-follow {
+    border: none;
+    background-color: #f8fbfa; 
+    /* background-color: lightgray; */
 }
