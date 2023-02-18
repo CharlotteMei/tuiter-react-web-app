@@ -1,76 +1,75 @@
-body {
-    background-color: black;
-    color:white
+
+/* navigation */
+.btn-round-corner-override {
+    width: 100%;
+    border-radius: 25px;
 }
 
-/* p {color: white} */
-
-#search-bar {
-    border-radius: 18px;
-    background: darkgrey;
-    padding: 20px; 
-    width: 300px;
-    height: 40px;    
+.list-group-item.override-bs {
+    border: none;
+    /* background-color: lightblue;  */
 }
 
-.float-left {
+/* main */
+
+.input-group-text.override-bs-search {
+    border-radius: 50px;
+    /* background-color: white; */
+    background-color: #f8fbfa; 
+    border-right: 0;
+}
+
+.form-control.override-bs-search {
+    border-radius: 50px;
+    /* background-color: white; */
+    background-color: #f8fbfa; 
+    border-left: 0;
+}
+
+.nav-link.active.override-bs {
+    color: black;
+    border-bottom: 4px solid #60aaf6;
+}
+
+.nav-link.override-bs {
+    color: lightgray;
+}
+
+.main-page-image {
+    width: 100%;
+}
+
+.main-post-logo {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.main-title-no-wrap {
+    display: inline;
     float: left;
- }
-
-.icon {
-    padding: 12px;
-    height: 25px;
-    width: 25px;
 }
 
-.highlight-color a {
-    color: rgb(29,161,242);
-    border-bottom: 5px solid  rgb(29,161,242);
+.text-bold {
+    font-weight: bold;
 }
 
-.no-highlight-color a {
-    color: rgb(110, 118, 125);
+/* follow */
+.account-profile-pic {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
 }
 
-.grid-row {
-    clear: both;
-}
-.grid-col a {
-    /* width: 12%; */
-    float: left;
-    padding: 16px;
-    font-size: 15px;
- }
-
-a {
-    text-decoration: none;
+#follow-button {
+    width: 20%;
 }
 
-.post {
-    padding: 10px;
-    height: 200px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: darkgrey;
-    font-size: 13px;
+.list-group.override-bs-follow {
+    border-radius: 20px;
 }
 
-.post-topic  {
-    color: rgb(110, 118, 125)
-}
-
-.post-small {
-    color: rgb(110, 118, 125)
-}
-
-.post-title {
-    font-size: 30px;
-}
-
-.post-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 18px;
-    float: right;
-    margin-right: 16px;
+.list-group-item.override-bs-follow {
+    border: none;
+    background-color: #f8fbfa; 
+    /* background-color: lightgray; */
 }
