@@ -1,16 +1,28 @@
-const NavigationSidebar = () => {
+const NavigationSidebar = (pageType) => {
+    var homePageStatus = "";
+    var explorePageStatus = "";
+    if (pageType === "home") {
+        //  block of code to be executed if the condition is true
+        homePageStatus = "active"
+      }else if (pageType === "explore") {
+        explorePageStatus = "active"
+      } else {
+        //  block of code to be executed if the condition is false
+        
+      }
+    
     return (`
     <div class="list-group">
     <a href="" class="list-group-item override-bs list-group-item-action">
         <i class="fab fa-twitter" style="color: #1DA1F2"></i>
     </a>
     
-    <a href="" class="list-group-item override-bs list-group-item-action">
+    <a href="../HomeScreen/index.html" class="list-group-item override-bs list-group-item-action ${homePageStatus}">
         <i class="fa fa-home"></i>
         <span class="ms-3">Home</span>
 
         </a>
-    <a href="" class="list-group-item override-bs list-group-item-action">
+    <a href="../ExploreScreen/index.html" class="list-group-item override-bs list-group-item-action ${explorePageStatus}">
         <i class="fa fa-hashtag"></i>
         <span class="ms-3">Explore</span>
         </a>
