@@ -1,76 +1,47 @@
-body {
-    background-color: black;
-    color:white
+.account-profile-pic {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
 }
 
-/* p {color: white} */
-
-#search-bar {
-    border-radius: 18px;
-    background: darkgrey;
-    padding: 20px; 
-    width: 300px;
-    height: 40px;    
+.main-post-logo {
+    border-radius: 10px;
+    width: 100%;
 }
 
-.float-left {
+.main-title-no-wrap {
+    display: inline;
     float: left;
- }
-
-.icon {
-    padding: 12px;
-    height: 25px;
-    width: 25px;
 }
 
-.highlight-color a {
-    color: rgb(29,161,242);
-    border-bottom: 5px solid  rgb(29,161,242);
+.input-group-text.override-bs-search {
+    border-radius: 50px;
+    /* background-color: white; */
+    background-color: #f8fbfa; 
+    border-right: 0;
 }
 
-.no-highlight-color a {
-    color: rgb(110, 118, 125);
+.form-control.override-bs-search {
+    border-radius: 50px;
+    /* background-color: white; */
+    background-color: #f8fbfa; 
+    border-left: 0;
 }
 
-.grid-row {
-    clear: both;
-}
-.grid-col a {
-    /* width: 12%; */
-    float: left;
-    padding: 16px;
-    font-size: 15px;
- }
-
-a {
-    text-decoration: none;
+.nav-link.active.override-bs {
+    color: black;
+    border-bottom: 4px solid #60aaf6;
 }
 
-.post {
-    padding: 10px;
-    height: 200px;
-    border-style: solid;
-    border-width: 1px;
-    border-color: darkgrey;
-    font-size: 13px;
+.nav-link.override-bs {
+    color: lightgray;
 }
 
-.post-topic  {
-    color: rgb(110, 118, 125)
+.main-page-image {
+    width: 100%;
 }
 
-.post-small {
-    color: rgb(110, 118, 125)
-}
-
-.post-title {
-    font-size: 30px;
-}
-
-.post-image {
-    width: 100px;
-    height: 100px;
-    border-radius: 18px;
-    float: right;
-    margin-right: 16px;
+.main-post-logo {
+    border-radius: 10px;
+    width: 100%;
 }
