@@ -22,7 +22,7 @@ const PostSummaryItem = (post) => {
                                 </div>
 
                                 <div class="col-2">
-                                    <img src="${post.image}" class="main-post-logo">
+                                    <img src="${post.image}" class="main-post-logo" style="border-radius: 10px; width: 100%;">
                                 </div>
                             </div>
                         </div>
