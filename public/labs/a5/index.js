@@ -165,9 +165,9 @@ console.log(string3);
 
 // use findIndex function to determine the index where an element is located inside an array
 const fourIndex = numberArray1
-   .findIndex(a => a === 4);
+    .findIndex(a => a === 4);
 const string3Index = stringArray1
-   .findIndex(a => a === 'string3');
+    .findIndex(a => a === 'string3');
 
 
 
@@ -200,9 +200,135 @@ console.log(greeting2)
 const init = () => {
     console.log('Hello world from jQuery');
     /* do the rest of the lab work here */
- }
- $(init);
-  
+
+    // Binding to the DOM
+    console.log("2.11 Binding to the DOM");
+    const bindById = $('#bind-by-id');
+    const bindByClass = $('.bind-by-class');
+    console.log('Binding to DOM');
+    console.log(bindById);
+    console.log(bindByClass);
+
+
+    // 2.12 Changing style programmatically
+    console.log("2.12 Changing style programmatically");
+    const changeStyle = $('#change-style');
+    const changeStyle2 = $('.change-style');
+    changeStyle.css('color', 'red');
+    changeStyle2.css('color', 'blue');
+
+    // 2.13 Getting and setting attributes
+    console.log("2.13 Getting and setting attributes");
+    const getIdAttr = $("#get-id-attr");
+    const id = getIdAttr.attr('id');
+    console.log(id);
+
+    const setClassAttr = $("#set-class-attr");
+    setClassAttr.attr('class', 'class-0');
+
+    // 2.14 Adding and removing classes
+    const addClass1Example = $("#add-class-1");
+    addClass1Example.addClass('class-1');
+
+    const removeClass1Example = $("#remove-class-1");
+    removeClass1Example.removeClass('class-2');
+
+    //2.15 Hiding and showing content
+    const hideMe = $("#hide-me");
+    hideMe.hide();
+
+    const showMe = $("#show-me");
+    showMe.show();
+
+
+    // 2.16 Creating new elements
+    const newLineItem = $("<li>Line item 1</li>");
+    const anotherLineItem = $("<li>Line item 2</li>");
+
+    // 2.17 Appending new elements
+    const ul = $("#append-new-elements");
+    ul.append(newLineItem);
+    ul.append(anotherLineItem);
+
+    // 2.18 Removing and emptying content
+    const removeLi = $("#remove-this");
+    const emptyUl = $("#empty-this");
+    removeLi.remove();
+    emptyUl.empty();
+
+    // 2.19 Changing content
+    const changeThisText =
+        $("#change-this-text");
+    const changeThisHtml =
+        $("#change-this-html");
+    changeThisText.html('New text');
+    changeThisHtml.html(`
+   <li>Line item A</li>
+   <li>Line item B</li>
+   <li>Line item C</li>
+`);
+
+
+    //2.20 Navigating up and down the DOM tree
+    const child2 = $("#child-2");
+    const parent1 =
+        child2.parents("#parent");
+    parent1
+        .css('background-color', 'red')
+        .css('color', 'white');
+
+    const parent = $("#parent");
+    const child = parent.find("#child-2");
+    child.css('background-color', 'blue')
+
+
+    //2.21 Handling click events
+    const handleClick =
+        () => console.log('Handle click');
+    const clickable = $('.clickable');
+    clickable.click(handleClick);
+
+
+    //2.22 Event target
+    const handleEventTarget = (event) => {
+        const target = event.target;
+        console.log(target);
+        $(target)
+            .css('background-color', 'blue')
+            .css('color', 'white');
+    }
+    const eventTarget = $("#event-target");
+    eventTarget.click(handleEventTarget);
+
+
+
+    // 2.23 Hiding and showing content
+    let hideBtn, showBtn, hideShowHeader;
+    hideBtn = $('#hide');
+    showBtn = $('#show');
+    hideShowHeader = $('#hide-show');
+    const hideHandler = () => {
+        hideShowHeader.hide();
+    }
+    const showHandler = () => {
+        hideShowHeader.show();
+    }
+    hideBtn.click(hideHandler);
+    showBtn.click(showHandler);
+
+
+
+
+
+
+
+
+
+}
+
+$(init);
+
+
 
 
 
