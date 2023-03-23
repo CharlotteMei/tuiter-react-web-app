@@ -1,4 +1,4 @@
-import TuitItem, { useState } from "./tuit-item";
+import TuitItem from "./tuit-item";
 import React from "react";
 import { useSelector } from "react-redux";
 
@@ -7,9 +7,12 @@ const TuitsList = () => {
     console.log(postArray)
     return (
         // <h1>Tuits List</h1>
-        postArray.map(
-            (post, index) => <TuitItem post={post}/>
-        )
+        <ul className="list-group">
+            {postArray.map(
+                (post, index) => <TuitItem post={post} />
+            )
+            }
+        </ul>
     );
 };
 
