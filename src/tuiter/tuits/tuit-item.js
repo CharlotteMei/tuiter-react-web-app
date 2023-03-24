@@ -2,8 +2,6 @@ import React from "react";
 import TuitStats from "./tuit-stats";
 
 const TuitItem = ({ post }) => {
-    console.log("in tuit-item")
-    console.log(post)
     return (
         <li className="list-group-item">
             <div class="row">
