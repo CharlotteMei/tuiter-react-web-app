@@ -1,20 +1,31 @@
 import React from "react";
 import TuitStats from "./tuit-stats";
+import { useDispatch } from "react-redux";
+import { deleteTuit } from "./tuits-reducer";
+
 
 const TuitItem = ({ post }) => {
+    const dispatch = useDispatch();
+
+    const deleteTuitHandler = (id) => {
+        dispatch(deleteTuit(id));
+    }
+
     return (
         <li className="list-group-item">
             <div class="row">
                 <div class="col-1">
-                    <img class="rounded-circle" width="150%" src={`${post.image}`} />
+                    <img width="150%" class="rounded-circle" src={`${post.image}`} alt="profile-pic"/>
                 </div>
                 <div class="col-11">
+                    <i className="bi bi-x-lg float-end"
+                        onClick={() => deleteTuitHandler(post._id)}></i>
                     <div class="fw-bold">{`${post.userName}`} <i class="fa-solid fa-circle-check"></i> <span class="text-secondary fw-normal">{`${post.handle}`} · {`${post.time}`}</span></div>
                     <div class=" mb-2">{post.tuit}</div>
                 </div>
             </div>
             <div class="row">
-                <TuitStats post={post}/>
+                <TuitStats post={post} />
             </div>
         </li>
     )
