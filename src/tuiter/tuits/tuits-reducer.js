@@ -21,6 +21,12 @@ const tuitsSlice = createSlice({
  name: 'tuits',
  initialState: tuits,
  reducers: {
+  likedToggle(state, action) {
+    const tuit = state.find((tuit)=> tuit._id === action.payload._id);
+    tuit.liked ? tuit.likes -= 1 : tuit.likes += 1
+    tuit.liked = !tuit.liked
+  },
+
    createTuit(state, action) {
      state.unshift({
        ...action.payload,
@@ -39,6 +45,6 @@ const tuitsSlice = createSlice({
  }
 });
 
-export const {createTuit, deleteTuit} = tuitsSlice.actions;
+export const {createTuit, deleteTuit, likedToggle} = tuitsSlice.actions;
 export default tuitsSlice.reducer;
 
