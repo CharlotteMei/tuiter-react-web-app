@@ -1,9 +1,9 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 
 const ProfileItem = () => {
     const profile = useSelector((state) => state.profile)
-    console.log(profile);
     return (
         <div>
             <div class="row" style={{ "margin": "10px" }}>
@@ -19,7 +19,11 @@ const ProfileItem = () => {
                 <img src={profile.bannerPicture} width="100%" alt="profile-banner"></img>
             </div>
             <div style={{ "padding": "15px" }}>
-                <button className="rounded-pill btn btn-secondary float-end">Edit Profile</button>
+                <button className="rounded-pill btn btn-secondary float-end">
+                    <Link to="/tuiter/edit-profile">
+                        Edit Profile
+                    </Link>
+                </button>
             </div>
             <div class="row">
                 <div class="col-2">
@@ -43,8 +47,8 @@ const ProfileItem = () => {
                     {profile.dateOfBirth}
                 </div>
                 <div class="col-3">
-                <i class="fa-solid fa-calendar-days" style={{ "padding": "10px" }}></i>
-                {profile.dateJoined}
+                    <i class="fa-solid fa-calendar-days" style={{ "padding": "10px" }}></i>
+                    {profile.dateJoined}
                 </div>
             </div>
             <div class="row">
