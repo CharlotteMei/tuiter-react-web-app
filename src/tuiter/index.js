@@ -10,14 +10,20 @@ import { Routes, Route } from "react-router";
 import whoReducer
   from "./reducers/who-reducer";
 import tuitsReducer from "./tuits/tuits-reducer";
-import profileReducer from "./profile/profile-reducer";
+// import profileReducer from "./profile/profile-reducer";
 
 import { configureStore }
   from '@reduxjs/toolkit';
 import { Provider } from "react-redux";
 
-const store = configureStore(
-  { reducer: { who: whoReducer, tuits: tuitsReducer, profile: profileReducer } });
+// const store = configureStore(
+//   { reducer: { who: whoReducer, tuits: tuitsReducer, profile: profileReducer } });
+const store = configureStore({
+  reducer: {
+    who: whoReducer,
+    tuitsData: tuitsReducer
+  }
+});
 
 
 function Tuiter() {
