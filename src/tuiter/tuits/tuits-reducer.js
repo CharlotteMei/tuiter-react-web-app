@@ -51,11 +51,11 @@ const tuitsSlice = createSlice({
         state.tuits = state.tuits
           .filter(t => t._id !== payload)
       },
-      [createTuitThunk.fulfilled]:
+    [createTuitThunk.fulfilled]:
       (state, { payload }) => {
         state.loading = false
         state.tuits.push(payload)
-    },
+      },
   },
 
   // old reducers not in use anymore
