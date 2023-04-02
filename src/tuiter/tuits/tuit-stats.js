@@ -32,7 +32,7 @@ const TuitStats = ({ post }) => {
                             () => {
                                 dispatch(updateTuitThunk({
                                 ...tuit,
-                                likes: tuit.likes + 1
+                                likes: likeCount+1
                             }))
                                 setLikeCount(likeCount+1)
                             }} ></i>
